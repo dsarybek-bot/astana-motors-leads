@@ -1,0 +1,26 @@
+{
+  "pages": {
+    "ВСТАВЬТЕ_PAGE_ID": {
+      "dealership_name": "Hyundai Premium Almaty"
+    }
+  },
+  "models": {
+    "Tucson": "Tucson",
+    "tucson": "Tucson",
+    "Туксон": "Tucson",
+    "Elantra": "Elantra",
+    "elantra": "Elantra",
+    "Элантра": "Elantra",
+    "Santa Fe": "Santa Fe",
+    "santa fe": "Santa Fe",
+    "Санта Фе": "Santa Fe",
+    "Palisade": "Palisade",
+    "palisade": "Palisade",
+    "Палисейд": "Palisade",
+    "Sonata": "Sonata",
+    "sonata": "Sonata",
+    "Соната": "Sonata"
+  },
+  "request_source": "f4397ac5-e89c-48fc-87f8-9e9308248698",
+  "creatio_url": "https://api-crm.astana-motors.kz/0/ServiceModel/BnzIntegrationService.svc/Call/MyCarCreateNewATCLead"
+}
