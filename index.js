@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const axios = require('axios');
-const crypto = require('crypto');
 const config = require('./config.json');
 
 const app = express();
@@ -9,8 +8,6 @@ app.use(express.json());
 
 const VERIFY_TOKEN = process.env.META_VERIFY_TOKEN;
 const PAGE_ACCESS_TOKEN = process.env.META_PAGE_ACCESS_TOKEN;
-const CREATIO_LOGIN = process.env.CREATIO_LOGIN;
-const CREATIO_PASSWORD = process.env.CREATIO_PASSWORD;
 
 // Верификация webhook от Meta
 app.get('/webhook', (req, res) => {
@@ -77,10 +74,6 @@ async function processLead(leadgenId, pageId) {
     console.log('Sending to Creatio:', JSON.stringify(payload));
 
     const crmRes = await axios.post(config.creatio_url, payload, {
-      auth: {
-        username: CREATIO_LOGIN,
-        password: CREATIO_PASSWORD
-      },
       headers: { 'Content-Type': 'application/json' }
     });
 
